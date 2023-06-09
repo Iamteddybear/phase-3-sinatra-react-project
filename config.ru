@@ -3,8 +3,8 @@ require_relative "./config/environment"
 # Allow CORS (Cross-Origin Resource Sharing) requests
 use Rack::Cors do
   allow do
-    origins '*'
-    resource '*', headers: :any, methods: [:get, :post, :delete, :put, :patch, :options, :head]
+    origins 'http://localhost:3000' # Update this with the actual origin of your React frontend
+    resource '*', headers: :any, methods: [:get,:put, :post, :patch, :delete, :options]
   end
 end
 
